@@ -32,91 +32,97 @@ class _EndCallState extends State<EndCall> {
         backgroundColor: Colors.transparent,
         body: Container(
           margin: const EdgeInsets.symmetric(horizontal: 24),
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 70,
-              ),
-              TopBar(text: '', onTap: () => Navigator.pop(context)),
-              const SizedBox(
-                height: 105,
-              ),
-              Container(
-                width: 155,
-                height: 155,
-                padding: const EdgeInsets.all(5),
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: primaryColor,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 70,
                 ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
-                  child: Image.asset('assets/images/fresh_salad.png'),
+                TopBar(text: '', onTap: () => Navigator.pop(context)),
+                const SizedBox(
+                  height: 105,
                 ),
-              ),
-              const SizedBox(
-                height: 26,
-              ),
-              Text(
-                'Thank you! \nOrder completed',
-                style: Theme.of(context).textTheme.headline1!.copyWith(
-                      color: primaryColor,
-                    ),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(
-                height: 108,
-              ),
-              Text(
-                'Please rate the driver',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline3!
-                    .copyWith(color: Colors.grey),
-              ),
-              const SizedBox(
-                height: 24,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  StarRating(
-                    rating: rating,
-                    onRatingChanged: (rating) =>
-                        setState(() => this.rating = rating),
-                  ),
-                ],
-              ),
-              const Spacer(),
-              TextField(
-                style: Theme.of(context).textTheme.headline4,
-                decoration: InputDecoration(
-                  contentPadding:
-                  const EdgeInsets.symmetric(horizontal: 25, vertical: 18),
-                  hintText: 'Leave feedback ...',
-                  hintStyle: Theme.of(context)
-                      .textTheme
-                      .headline4!
-                      .copyWith(color: Colors.grey),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(100),
-                    borderSide: BorderSide(color: Colors.grey.withOpacity(0.3)),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(100),
-                    borderSide: const BorderSide(color: primaryColor),
-                  ),
-                  suffixIcon: IconButton(
-                    icon: const Icon(Icons.edit),
+                Container(
+                  width: 155,
+                  height: 155,
+                  padding: const EdgeInsets.all(5),
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
                     color: primaryColor,
-                    onPressed: (){},
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: Image.asset('assets/images/fresh_salad.png'),
                   ),
                 ),
-              ),
-              const Spacer(),
-              BottomButton(text: 'Submit', onTap: (){}),
-              const SizedBox(height: 30,)
-            ],
+                const SizedBox(
+                  height: 26,
+                ),
+                Text(
+                  'Thank you! \nOrder completed',
+                  style: Theme.of(context).textTheme.headline1!.copyWith(
+                        color: primaryColor,
+                      ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(
+                  height: 108,
+                ),
+                Text(
+                  'Please rate the driver',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline3!
+                      .copyWith(color: Colors.grey),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    StarRating(
+                      rating: rating,
+                      onRatingChanged: (rating) =>
+                          setState(() => this.rating = rating),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                TextField(
+                  style: Theme.of(context).textTheme.headline4,
+                  decoration: InputDecoration(
+                    contentPadding:
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 18),
+                    hintText: 'Leave feedback ...',
+                    hintStyle: Theme.of(context)
+                        .textTheme
+                        .headline4!
+                        .copyWith(color: Colors.grey),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(100),
+                      borderSide: BorderSide(color: Colors.grey.withOpacity(0.3)),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(100),
+                      borderSide: const BorderSide(color: primaryColor),
+                    ),
+                    suffixIcon: IconButton(
+                      icon: const Icon(Icons.edit),
+                      color: primaryColor,
+                      onPressed: (){},
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                BottomButton(text: 'Submit', onTap: (){}),
+                const SizedBox(height: 30,)
+              ],
+            ),
           ),
         ),
       ),

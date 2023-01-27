@@ -5,6 +5,7 @@ import 'package:foode_app/features/chat_page/in_chat.dart';
 import 'package:foode_app/features/home_page/find_your_food.dart';
 import 'package:foode_app/features/home_page/notificaton/notification.dart';
 import 'package:foode_app/features/home_page/popular_menu.dart';
+import 'package:foode_app/features/profile_page/favorite_food.dart';
 
 import '../features/authentication/login/forget_password.dart';
 import '../features/authentication/login/login_screen.dart';
@@ -74,7 +75,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (context) => const EndCall());
       case FoodeNotification.routeName:
         return MaterialPageRoute(builder: (context) => const FoodeNotification());
-
+      case FavoriteFood.routeName:
+        return MaterialPageRoute(builder: (context) => const FavoriteFood());
       default:
         return MaterialPageRoute(builder: (context) => const SplashScreen());
     }

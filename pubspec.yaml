@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   custom_check_box: ^0.0.4
   group_button: ^3.3.1
+  sliding_up_panel: ^2.0.0+1
 
 dev_dependencies:
   flutter_test:
