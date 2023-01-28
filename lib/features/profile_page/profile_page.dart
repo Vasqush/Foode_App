@@ -15,7 +15,7 @@ class ProfilePage extends StatelessWidget {
         body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/profile.png'),
+              image: AssetImage('assets/images/avartar.png'),
               alignment: Alignment.topCenter,
             ),
           ),
